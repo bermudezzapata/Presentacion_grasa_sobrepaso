@@ -1,9 +1,9 @@
- <!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Pasagrass: La Solución Energética para Rumiantes - Presentación Completa</title>
+    <title>Potenciando la ganadería con energía inteligente</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -13,21 +13,21 @@
         /* General body and font settings */
         body {
             font-family: 'Inter', sans-serif;
-            background-color: #f7fafc; /* Very light gray for a clean, modern look */
+            background-color: #f7fafc;
             color: #1a202c;
         }
         /* New corporate color palette for better contrast */
         :root {
-            --premex-blue-dark: #1E3A8A; /* A darker, more contrasting blue */
-            --premex-blue-light: #2563EB; /* A vibrant blue for accents */
+            --premex-blue-dark: #1E3A8A;
+            --premex-blue-light: #2563EB;
             --premex-accent: #754133;
-            --premex-card-bg: #EBF4FF; /* A light blue background for data cards */
+            --premex-card-bg: #EBF4FF;
         }
         .text-premex-blue-dark { color: var(--premex-blue-dark); }
         .bg-premex-blue-dark { background-color: var(--premex-blue-dark); }
         .text-premex-blue-light { color: var(--premex-blue-light); }
         .bg-premex-card-bg { background-color: var(--premex-card-bg); }
-        
+
         /* Chart specific styling */
         .chart-container {
             position: relative;
@@ -42,7 +42,7 @@
                 height: 300px;
             }
         }
-        
+
         /* Icon card styling */
         .icon-card {
             display: flex;
@@ -71,7 +71,7 @@
             font-size: 0.875rem;
             color: #4a5568;
         }
-        
+
         /* Table styling with alternating rows */
         .technical-table th, .technical-table td {
             padding: 1.25rem 1rem;
@@ -84,7 +84,7 @@
             letter-spacing: 0.05em;
         }
         .technical-table tbody tr:nth-child(odd) {
-            background-color: #f0f4ff; /* A lighter blue shade */
+            background-color: #f0f4ff;
         }
         .technical-table tbody tr:nth-child(even) {
             background-color: #ffffff;
@@ -93,12 +93,25 @@
         /* Number badge styling for key figures */
         .number-badge {
              border: 2px solid var(--premex-blue-light);
-             background-color: #EBF4FF; /* Light blue contrasting background */
+             background-color: #EBF4FF;
              padding: 0.5rem 1.25rem;
-             border-radius: 9999px; /* rounded-full */
+             border-radius: 9999px;
              display: inline-block;
              font-weight: 700;
              box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+        }
+
+        .data-card {
+            background-color: var(--premex-card-bg);
+            border: 1px solid #d2d6dc;
+            padding: 1.5rem;
+            border-radius: 1.5rem;
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+        }
+        .data-card h3 {
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: var(--premex-blue-dark);
         }
     </style>
 </head>
@@ -117,11 +130,12 @@
         <section id="solution" class="mb-20">
             <div class="grid grid-cols-1 md:grid-cols-2 gap-12 items-center bg-white text-premex-blue-dark p-8 md:p-12 rounded-3xl shadow-xl border border-gray-200">
                 <div>
-                    <h2 class="text-3xl lg:text-4xl font-black text-premex-blue-dark mb-4">El Problema: Reto energético</h2>
+                    <h2 class="text-3xl lg:text-4xl font-black text-premex-blue-dark mb-4">El problema: Reto energético</h2>
                     <p class="text-lg leading-relaxed mb-6 text-gray-700">
-                        En los sistemas de producción animal de alta exigencia, la energía es el factor limitante para alcanzar la productividad deseada. Los forrajes y concentrados tradicionales a menudo no pueden suplir la alta demanda energética sin afectar la salud ruminal. Pasagrass® aporta entre 
-                        <span class="font-bold text-premex-blue-light">2.2</span> y 
-                        <span class="font-bold text-premex-blue-light">2.5</span> veces más energía neta de lactancia (ENL) que los almidones, sin reducir el pH ruminal.
+                        En los sistemas de producción animal de alta exigencia, la energía es el factor limitante para alcanzar la productividad deseada. Los forrajes y concentrados tradicionales a menudo no pueden suplir la alta demanda energética sin afectar la salud ruminal.
+                    </p>
+                     <p class="text-lg leading-relaxed mb-6 text-gray-700">
+                        Principalmente por nuestros grandes retos energéticos en rumiantes, donde la grasa de sobrepaso al ser una fuente de lípidos protegidos de la biohidrogenación ruminal, permite la absorción en intestino delgado como fuente de ácidos grasos de cadena larga de origen vegetal. Permite incrementar la densidad energética de la ración sin afectar la fermentación ruminal (Salud metabólica). Aporta 2.20–2.50 veces más energía neta de lactancia (ENL) que los almidones (Palmquist et al., 1993). No reduce el pH ruminal ni afecta la digestibilidad de la fibra detergente neutro (FND). Clave en zonas tropicales con altas cargas térmicas: reduce calor metabólico frente al almidón (Drackley et al., 2001).
                     </p>
                     <h2 class="text-3xl lg:text-4xl font-black text-premex-blue-dark mb-4">La Solución: Grasa de Sobrepaso Pasagrass®</h2>
                     <p class="text-lg leading-relaxed text-gray-700">
@@ -130,13 +144,13 @@
                 </div>
                 <div class="flex flex-col items-center justify-center space-y-8">
                     <div class="text-center p-8 bg-premex-card-bg rounded-2xl w-full border border-premex-blue-light shadow-md">
-                        <p class="text-6xl font-black text-premex-blue-dark number-badge">2.5x</p>
-                        <p class="text-xl font-semibold text-premex-blue-dark mt-4">Más Energía Neta que los Almidones</p>
-                        <p class="text-sm text-gray-600 mt-2">Sin el riesgo de acidosis ruminal.</p>
+                        <p class="text-6xl font-black text-premex-blue-dark number-badge">5.27</p>
+                        <p class="text-xl font-semibold text-premex-blue-dark mt-4">Mcal/kg MS - ENL Corregida</p>
+                        <p class="text-sm text-gray-600 mt-2">Valor real utilizable en formulación.</p>
                     </div>
                     <div class="text-center p-8 bg-premex-card-bg rounded-2xl w-full border border-premex-blue-light shadow-md">
-                        <p class="text-6xl font-black text-premex-blue-dark number-badge">84.9%</p>
-                        <p class="text-xl font-semibold text-premex-blue-dark mt-4">Grasa Total (Base Seca)</p>
+                        <p class="text-6xl font-black text-premex-blue-dark number-badge">83.45%</p>
+                        <p class="text-xl font-semibold text-premex-blue-dark mt-4">Grasa Total (Base Húmeda)</p>
                     </div>
                 </div>
             </div>
@@ -191,7 +205,7 @@
         <section id="benefits" class="mb-20">
             <div class="text-center max-w-4xl mx-auto mb-16">
                 <h2 class="text-3xl lg:text-4xl font-black text-premex-blue-dark mb-4">Beneficios Clave Basados en la Ciencia</h2>
-                <p class="text-lg text-gray-700">La suplementación con grasa de sobrepaso ha demostrado mejoras significativas en la productividad, la salud y la reproducción del hato, respaldadas por evidencia científica documentada.</p>
+                <p class="text-lg text-gray-700">La suplementación con Grasa de sobrepaso de Jabón Calcico ha demostrado mejoras significativas en la productividad, la salud y la reproducción del rebaño, respaldadas por evidencia científica documentada.</p>
             </div>
             <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
                 <div class="icon-card">
@@ -241,7 +255,62 @@
             </div>
         </section>
 
-        <!-- Section 4: Technical Comparison of Energy Sources -->
+        <!-- Section 4: Technical Profile and Composition -->
+        <section id="technical-profile" class="mb-20">
+            <div class="text-center max-w-4xl mx-auto mb-16">
+                <h2 class="text-3xl lg:text-4xl font-black text-premex-blue-dark mb-4">Perfil y Composición Técnica</h2>
+                <p class="text-lg text-gray-700">Pasagrass® ha sido analizado por el laboratorio Dairy One (USA), garantizando su calidad y consistencia.</p>
+            </div>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-12 items-start bg-white p-8 md:p-12 rounded-3xl shadow-xl border border-gray-200">
+                <div class="space-y-6">
+                    <div class="data-card">
+                        <h3 class="mb-2">Composición Detallada</h3>
+                        <ul class="space-y-2 text-lg">
+                            <li class="flex justify-between items-center">
+                                <span class="font-semibold text-gray-700">Grasa total (base húmeda):</span>
+                                <span class="font-bold text-premex-blue-dark">83.45%</span>
+                            </li>
+                             <li class="flex justify-between items-center">
+                                <span class="font-semibold text-gray-700">Humedad:</span>
+                                <span class="font-bold text-premex-blue-dark">1.7%</span>
+                            </li>
+                             <li class="flex justify-between items-center">
+                                <span class="font-semibold text-gray-700">Calcio:</span>
+                                <span class="font-bold text-premex-blue-dark">9.91%</span>
+                            </li>
+                            <li class="flex justify-between items-center">
+                                <span class="font-semibold text-gray-700">Granulometría:</span>
+                                <span class="font-bold text-premex-blue-dark">< 3 mm</span>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                 <div class="h-full flex flex-col justify-center items-center">
+                    <h3 class="text-2xl font-bold text-premex-blue-dark mb-6 text-center">Perfil de Ácidos Grasos</h3>
+                    <div class="chart-container h-[300px] md:h-[350px]">
+                        <canvas id="fattyAcidsChart"></canvas>
+                    </div>
+                    <!-- The updated layout for the fatty acids text -->
+                    <div class="mt-6 w-full max-w-lg mx-auto">
+                        <p class="text-gray-700 text-center mb-6">
+                            Con un perfil lipídico dominante en Ácido Palmítico (C16:0) y Oleico (C18:1), Pasagrass® está optimizado para maximizar la producción de leche y mejorar la condición corporal.
+                        </p>
+                        <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                            <div class="bg-white p-6 rounded-2xl shadow-md border border-gray-200">
+                                <h4 class="font-bold text-lg text-premex-blue-dark mb-2">Ácido Palmítico (C16:0)</h4>
+                                <p class="text-sm text-gray-600">Contribuye directamente a un aumento en el porcentaje de grasa en la leche.</p>
+                            </div>
+                            <div class="bg-white p-6 rounded-2xl shadow-md border border-gray-200">
+                                <h4 class="font-bold text-lg text-premex-blue-dark mb-2">Ácido Oleico (C18:1)</h4>
+                                <p class="text-sm text-gray-600">Optimiza la condición corporal de las vacas y mejora la eficiencia reproductiva.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Section 5: Technical Comparison of Energy Sources -->
         <section id="technical-comparison" class="mb-20">
             <div class="text-center max-w-4xl mx-auto mb-16">
                 <h2 class="text-3xl lg:text-4xl font-black text-premex-blue-dark mb-4">Comparación Técnica de Fuentes Energéticas</h2>
@@ -278,7 +347,7 @@
                         </tr>
                         <tr>
                             <td>Energía neta lactancia (ENL)</td>
-                            <td>2.2-2.5x > que almidón</td>
+                            <td>2.2-2.5 veces > que almidón</td>
                             <td>Media</td>
                             <td>Alta, pero mal aprovechada</td>
                         </tr>
@@ -299,43 +368,6 @@
             </div>
         </section>
 
-        <!-- Section 5: Technical Profile and Composition -->
-        <section id="technical-profile" class="mb-20">
-            <div class="grid grid-cols-1 md:grid-cols-2 gap-12 items-center bg-white p-8 md:p-12 rounded-3xl shadow-xl border border-gray-200">
-                <div class="h-full">
-                    <h3 class="text-2xl font-bold text-premex-blue-dark mb-6 text-center">Perfil de Ácidos Grasos</h3>
-                    <div class="chart-container h-[300px] md:h-[350px]">
-                        <canvas id="fattyAcidsChart"></canvas>
-                    </div>
-                </div>
-                <div class="h-full">
-                    <h3 class="text-2xl font-bold text-premex-blue-dark mb-6">Composición y Calidad</h3>
-                    <ul class="space-y-4 text-lg">
-                        <li class="flex justify-between items-center border-b pb-2">
-                            <span class="font-semibold text-gray-700">Grasa Total (MS)</span>
-                            <span class="number-badge font-bold text-premex-blue-dark">84.9%</span>
-                        </li>
-                        <li class="flex justify-between items-center border-b pb-2">
-                            <span class="font-semibold text-gray-700">Calcio</span>
-                            <span class="number-badge font-bold text-premex-blue-dark">9.91%</span>
-                        </li>
-                         <li class="flex justify-between items-center border-b pb-2">
-                            <span class="font-semibold text-gray-700">Humedad</span>
-                            <span class="number-badge font-bold text-premex-blue-dark">&lt; 2%</span>
-                        </li>
-                        <li class="flex justify-between items-center border-b pb-2">
-                            <span class="font-semibold text-gray-700">Origen</span>
-                            <span class="number-badge font-bold text-premex-blue-dark">100% Vegetal</span>
-                        </li>
-                        <li class="flex justify-between items-center">
-                            <span class="font-semibold text-gray-700">Granulometría</span>
-                            <span class="number-badge font-bold text-premex-blue-dark">&lt; 3 mm</span>
-                        </li>
-                    </ul>
-                    <p class="mt-6 text-gray-700">El perfil lipídico de Pasagrass® es dominante en Ácido Palmítico (C16:0) y Ácido Oleico (C18:1). El Ácido Palmítico ayuda a maximizar la producción de grasa en la leche, mientras que el Ácido Oleico mejora la condición corporal y el balance energético, crucial para la fertilidad.</p>
-                </div>
-            </div>
-        </section>
 
         <!-- Section 6: Recommended Dosage -->
         <section id="dosage" class="mb-20">
@@ -356,17 +388,17 @@
                         <tr class="border-b border-gray-200">
                             <td class="p-4 font-semibold text-premex-blue-dark">Vacas de leche</td>
                             <td class="p-4 text-gray-700">Especializadas (alta producción)</td>
-                            <td class="p-4 font-mono text-gray-700">250 - 600 g/vaca/día</td>
+                            <td class="p-4 font-mono text-gray-700">250 - 500 g/a/día</td>
                         </tr>
                         <tr class="border-b border-gray-200">
                             <td class="p-4 font-semibold text-premex-blue-dark">Vacas lecheras</td>
                             <td class="p-4 text-gray-700">Trópico Bajo</td>
-                            <td class="p-4 font-mono text-gray-700">10 g por cada litro de leche producida (100 - 300 g/día)</td>
+                            <td class="p-4 font-mono text-gray-700">10 g/lt de leche producida (100 - 300 g/día)</td>
                         </tr>
                         <tr class="border-b border-gray-200">
                             <td class="p-4 font-semibold text-premex-blue-dark">Vacas Cría</td>
                             <td class="p-4 text-gray-700">Preparto y Posparto</td>
-                            <td class="p-4 font-mono text-gray-700">150 - 300 g/vaca/día</td>
+                            <td class="p-4 font-mono text-gray-700">150 - 300 g/a/día</td>
                         </tr>
                         <tr class="border-b border-gray-200">
                             <td class="p-4 font-semibold text-premex-blue-dark">Novillos</td>
@@ -381,12 +413,12 @@
                         <tr class="border-b border-gray-200">
                             <td class="p-4 font-semibold text-premex-blue-dark">Búfalos</td>
                             <td class="p-4 text-gray-700">General</td>
-                            <td class="p-4 font-mono text-gray-700">200 - 400 g/vaca/día</td>
+                            <td class="p-4 font-mono text-gray-700">200 - 400 g/a/día</td>
                         </tr>
                          <tr class="border-b border-gray-200">
                             <td class="p-4 font-semibold text-premex-blue-dark">Ovinos y Caprinos</td>
                             <td class="p-4 text-gray-700">General</td>
-                            <td class="p-4 font-mono text-gray-700">40 - 100 g/vaca/día</td>
+                            <td class="p-4 font-mono text-gray-700">40 - 100 g/a/día</td>
                         </tr>
                         <tr>
                              <td class="p-4 font-semibold text-premex-blue-dark">Equinos</td>
@@ -470,7 +502,7 @@
                     labels: ['Ácido Palmítico (C16:0)', 'Ácido Oleico (C18:1)', 'Ácido Linoleico (C18:2)', 'Otros'],
                     datasets: [{
                         label: 'Perfil de Ácidos Grasos',
-                        data: [40.13, 40.16, 10.89, 8.82], // 100 - 40.13 - 40.16 - 10.89 = 8.82
+                        data: [40.13, 40.16, 10.89, 8.82],
                         backgroundColor: [
                             colors.premexBlueDark,
                             colors.premexAccent,
