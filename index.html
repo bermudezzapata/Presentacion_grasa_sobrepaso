@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+ <!DOCTYPE html>
 <html lang="es">
 <head>
     <meta charset="UTF-8">
@@ -15,12 +15,18 @@
             background-color: #f0f4f8;
             color: #1a202c;
         }
-        .text-premex-blue { color: #003f5c; }
-        .bg-premex-blue { background-color: #003f5c; }
-        .text-premex-yellow { color: #ffa600; }
-        .bg-premex-yellow { background-color: #ffa600; }
+        /* Colores corporativos de Premex obtenidos de una búsqueda */
+        :root {
+            --premex-blue: #203A59;
+            --premex-accent: #754133;
+            --premex-light-gray: #EEEEEE;
+        }
+        .text-premex-blue { color: var(--premex-blue); }
+        .bg-premex-blue { background-color: var(--premex-blue); }
+        .text-premex-accent { color: var(--premex-accent); }
+        .bg-premex-accent { background-color: var(--premex-accent); }
         .gradient-bg {
-            background: linear-gradient(135deg, #003f5c, #1d6a96);
+            background: linear-gradient(135deg, var(--premex-blue), #1d6a96);
         }
         .chart-container {
             position: relative;
@@ -48,50 +54,59 @@
             height: 100%;
         }
         .icon-card .icon {
-            font-size: 3rem;
             margin-bottom: 0.5rem;
-            line-height: 1;
         }
         .icon-card h3 {
             font-weight: 700;
-            color: #003f5c;
+            color: var(--premex-blue);
             margin-bottom: 0.5rem;
         }
         .icon-card p {
             font-size: 0.875rem;
             color: #4a5568;
         }
+        .technical-table th, .technical-table td {
+            padding: 1rem;
+        }
+        .technical-table th {
+            background-color: #e2e8f0;
+            color: #2d3748;
+            font-weight: bold;
+        }
+        .technical-table tbody tr:nth-child(odd) {
+            background-color: #f7fafc;
+        }
     </style>
 </head>
 <body class="text-gray-800">
 
-    <header class="gradient-bg text-white p-8 md:p-12 text-center shadow-lg">
+    <header class="gradient-bg text-white p-8 md:p-12 text-center shadow-lg relative">
         <h1 class="text-4xl md:text-5xl lg:text-6xl font-black tracking-tight">Pasagrass®</h1>
-        <p class="mt-4 text-xl md:text-2xl lg:text-3xl font-light">Energía que Transforma la Nutrición en Resultados</p>
+        <p class="mt-4 text-xl md:text-2xl lg:text-3xl font-light">Potenciando la ganadería con energía inteligente</p>
         <p class="mt-2 text-md md:text-lg font-light text-gray-200">Una alianza estratégica entre Grascal Energy y Premex S.A.S.</p>
     </header>
 
     <main class="container mx-auto p-4 md:p-8">
 
-        <!-- Sección 1: El Desafío y la Solución -->
+        <!-- Sección 1: El Desafío y la Solución con fondo azul -->
         <section id="solution" class="mb-16">
-            <div class="grid grid-cols-1 md:grid-cols-2 gap-12 items-center bg-white p-8 md:p-12 rounded-xl shadow-md">
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-12 items-center bg-premex-blue text-white p-8 md:p-12 rounded-xl shadow-md">
                 <div>
-                    <h2 class="text-3xl lg:text-4xl font-black text-premex-blue mb-4">El Problema: El Cuello de Botella Energético</h2>
-                    <p class="text-lg text-gray-600 leading-relaxed mb-6">En los sistemas de producción animal de alta exigencia, la energía es el factor limitante para alcanzar la productividad deseada. Los forrajes y concentrados tradicionales a menudo no pueden suplir la alta demanda energética sin afectar la salud ruminal.</p>
-                    <h2 class="text-3xl lg:text-4xl font-black text-premex-blue mb-4">La Solución: Grasa de Sobrepaso Pasagrass®</h2>
-                    <p class="text-lg text-gray-600 leading-relaxed">Pasagrass® es una solución de nutrición lipídica avanzada, 100% vegetal, diseñada para proveer una fuente de energía densa sin interferir con la fermentación ruminal. Su mecanismo de "by-pass" garantiza que los lípidos sean absorbidos de manera eficiente en el intestino delgado.</p>
+                    <h2 class="text-3xl lg:text-4xl font-black text-white mb-4">El Problema: Reto energético</h2>
+                    <p class="text-lg leading-relaxed mb-6">En los sistemas de producción animal de alta exigencia, la energía es el factor limitante para alcanzar la productividad deseada. Los forrajes y concentrados tradicionales a menudo no pueden suplir la alta demanda energética sin afectar la salud ruminal.</p>
+                    <p class="text-lg leading-relaxed mb-6">Pasagrass® aporta entre 2.2 y 2.5 veces más energía neta de lactancia (ENL) que los almidones, sin reducir el pH ruminal ni afectar la digestibilidad de la fibra.</p>
+                    <h2 class="text-3xl lg:text-4xl font-black text-white mb-4">La Solución: Grasa de Sobrepaso Pasagrass®</h2>
+                    <p class="text-lg leading-relaxed">Pasagrass® es una solución de nutrición lipídica avanzada, 100% vegetal, diseñada para proveer una fuente de energía densa sin interferir con la fermentación ruminal. Su mecanismo de "by-pass" garantiza que los lípidos sean absorbidos de manera eficiente en el intestino delgado.</p>
                 </div>
                 <div class="flex flex-col items-center justify-center space-y-6">
-                    <div class="text-center p-6 bg-yellow-50 rounded-xl w-full">
-                        <p class="text-6xl font-black text-premex-yellow">2.5x</p>
-                        <p class="text-xl font-semibold text-premex-blue mt-2">Más Energía Neta que los Almidones</p>
-                        <p class="text-sm text-gray-500">Sin el riesgo de acidosis ruminal.</p>
+                    <div class="text-center p-6 bg-blue-900 bg-opacity-30 rounded-xl w-full">
+                        <p class="text-6xl font-black text-white">2.5x</p>
+                        <p class="text-xl font-semibold text-white mt-2">Más Energía Neta que los Almidones</p>
+                        <p class="text-sm text-gray-300">Sin el riesgo de acidosis ruminal.</p>
                     </div>
-                    <div class="text-center p-6 bg-blue-50 rounded-xl w-full">
-                        <p class="text-6xl font-black text-premex-blue">84.9%</p>
-                        <p class="text-xl font-semibold text-premex-yellow mt-2">Grasa Total (Base Seca)</p>
-                        <p class="text-sm text-gray-500">Un concentrado de energía pura y eficaz.</p>
+                    <div class="text-center p-6 bg-blue-900 bg-opacity-30 rounded-xl w-full">
+                        <p class="text-6xl font-black text-white">83.4%</p>
+                        <p class="text-xl font-semibold text-white mt-2">Grasa Total (Base Húmeda)</p>
                     </div>
                 </div>
             </div>
@@ -104,54 +119,156 @@
                 <p class="text-lg text-gray-600">Pasagrass® se obtiene a partir de ácidos grasos de palma saponificados con hidróxido de calcio. Este proceso crea una grasa protegida que pasa intacta por el rumen, donde podría interferir con la digestión de la fibra, y se absorbe eficientemente en el intestino delgado.</p>
             </div>
             <div class="grid grid-cols-1 md:grid-cols-3 gap-8 text-center max-w-5xl mx-auto">
-                <div class="p-6 bg-white rounded-xl shadow-md border-t-4 border-premex-yellow">
-                    <div class="text-5xl mb-4">🐄</div>
+                <div class="p-6 bg-white rounded-xl shadow-md border-t-4 border-premex-blue">
+                    <div class="icon w-12 h-12 mx-auto mb-4 text-premex-blue">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-cow">
+                            <path d="M12 18V6l-2 2" />
+                            <path d="M12 18V6l2 2" />
+                            <path d="M10 20a2 2 0 0 1-2-2v-2h4v2a2 2 0 0 1-2 2z" />
+                            <path d="M14 20a2 2 0 0 1 2-2v-2h-4v2a2 2 0 0 1 2 2z" />
+                            <path d="M12 12a4 4 0 0 0-4-4h-.2a4 4 0 0 0-3.6 2.6l-1 2.8A2 2 0 0 0 4.4 16h15.2a2 2 0 0 0 1.8-2.6l-1-2.8a4 4 0 0 0-3.6-2.6h-.2a4 4 0 0 0-4 4Z" />
+                        </svg>
+                    </div>
                     <h3 class="text-xl font-bold text-premex-blue mb-2">Paso 1: Ingestión</h3>
                     <p class="text-gray-600">El producto se suministra junto con la ración diaria, sin requerir cambios complejos en el manejo del alimento.</p>
                 </div>
                 <div class="p-6 bg-white rounded-xl shadow-md border-t-4 border-premex-blue">
-                    <div class="text-5xl mb-4">🛡️</div>
+                    <div class="icon w-12 h-12 mx-auto mb-4 text-premex-blue">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-shield-check">
+                            <path d="M20 13c0 5-2.9 8.9-6.2 10l-1.5-1.5" />
+                            <path d="M5.6 13c0 5 2.9 8.9 6.2 10l1.5-1.5" />
+                            <path d="M12 22a8.5 8.5 0 0 1-2.2-.4l-1.5-1.1-1.6-1.6c-.6-.6-1-1.4-1.3-2.3C5.1 14.2 5 13 5 12V5l7-3 7 3v6" />
+                            <path d="m9 12 2 2 4-4" />
+                        </svg>
+                    </div>
                     <h3 class="text-xl font-bold text-premex-blue mb-2">Paso 2: Protección Ruminal</h3>
                     <p class="text-gray-600">Las sales cálcicas pasan por el rumen sin degradarse, manteniendo la salud de los microorganismos y la digestión de la fibra.</p>
                 </div>
-                <div class="p-6 bg-white rounded-xl shadow-md border-t-4 border-premex-yellow">
-                    <div class="text-5xl mb-4">✅</div>
+                <div class="p-6 bg-white rounded-xl shadow-md border-t-4 border-premex-blue">
+                    <div class="icon w-12 h-12 mx-auto mb-4 text-premex-blue">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-check-circle-2">
+                            <circle cx="12" cy="12" r="10" />
+                            <path d="m9 12 2 2 4-4" />
+                        </svg>
+                    </div>
                     <h3 class="text-xl font-bold text-premex-blue mb-2">Paso 3: Absorción Intestinal</h3>
                     <p class="text-gray-600">En el intestino, los ácidos grasos se liberan y se absorben, entregando la energía pura al torrente sanguíneo del animal.</p>
                 </div>
             </div>
         </section>
 
-        <!-- Sección 4: Beneficios y Evidencia Científica -->
+        <!-- Sección 3: Beneficios y Evidencia Científica -->
         <section id="benefits" class="mb-16">
             <div class="text-center max-w-4xl mx-auto mb-12">
                 <h2 class="text-3xl lg:text-4xl font-black text-premex-blue mb-4">Beneficios Clave Basados en la Ciencia</h2>
-                <p class="text-lg text-gray-600">La suplementación con Pasagrass® ha demostrado mejoras significativas en la productividad, la salud y la reproducción del rebaño, respaldadas por evidencia científica documentada.</p>
+                <p class="text-lg text-gray-600">La suplementación con grasa de sobrepaso ha demostrado mejoras significativas en la productividad, la salud y la reproducción del hato, respaldadas por evidencia científica documentada.</p>
             </div>
             <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-                <div class="icon-card">
-                    <div class="icon">📈</div>
+                <div class="icon-card border-l-4 border-premex-blue">
+                    <div class="icon w-12 h-12 text-premex-blue">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-line-chart">
+                            <path d="M3 3v18h18" />
+                            <path d="m18 9-6 6-4-4-3 3" />
+                        </svg>
+                    </div>
                     <h3 class="text-xl">Producción Láctea</h3>
                     <p class="text-gray-600 mt-2">Aumenta la producción de leche en un <span class="font-bold text-premex-blue">+8% a +15%</span> y mejora el tenor de grasa en <span class="font-bold text-premex-blue">+0.2 a +0.4 puntos porcentuales</span>.</p>
                 </div>
-                <div class="icon-card">
-                    <div class="icon">💖</div>
+                <div class="icon-card border-l-4 border-premex-blue">
+                    <div class="icon w-12 h-12 text-premex-blue">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-heart-handshake">
+                            <path d="M19 14c1.49-1.46 3-3.21 3-5.5A5.5 5.5 0 0 0 16.5 3c-1.76 0-3 .5-4.5 2-1.5-1.5-2.74-2-4.5-2A5.5 5.5 0 0 0 2 8.5c0 2.3 1.5 4.05 3 5.5l7 7Z" />
+                            <path d="M12 5h-2" />
+                            <path d="m17.7 17.7-2.5 2.5a1.5 1.5 0 0 1-2.5 0L7.3 17.7a1.5 1.5 0 0 1 0-2.5l2.5-2.5a1.5 1.5 0 0 1 2.5 0l2.5 2.5a1.5 1.5 0 0 1 0 2.5Z" />
+                        </svg>
+                    </div>
                     <h3 class="text-xl">Fertilidad</h3>
                     <p class="text-gray-600 mt-2">Mejora la tasa de concepción en un <span class="font-bold text-premex-blue">+20% a +30%</span>, optimizando el desempeño reproductivo.</p>
                 </div>
-                <div class="icon-card">
-                    <div class="icon">⚖️</div>
+                <div class="icon-card border-l-4 border-premex-blue">
+                    <div class="icon w-12 h-12 text-premex-blue">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-heart-pulse">
+                            <path d="M19 14c1.49-1.46 3-3.21 3-5.5A5.5 5.5 0 0 0 16.5 3c-1.76 0-3 .5-4.5 2-1.5-1.5-2.74-2-4.5-2A5.5 5.5 0 0 0 2 8.5c0 2.3 1.5 4.05 3 5.5l7 7Z" />
+                            <path d="M3.2 10H8l2.7 5.1c.5.9.9 1.9 1.6 2.4l.2-.2c1.4-1.5 2.8-2.9 4.2-4.4L20.8 10" />
+                        </svg>
+                    </div>
                     <h3 class="text-xl">Salud Metabólica</h3>
                     <p class="text-gray-600 mt-2">Reduce el riesgo de problemas metabólicos como cetosis y acidosis, mejorando el balance energético negativo.</p>
                 </div>
-                <div class="icon-card">
-                    <div class="icon">🌡️</div>
+                <div class="icon-card border-l-4 border-premex-blue">
+                    <div class="icon w-12 h-12 text-premex-blue">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-thermometer">
+                            <path d="M14 4.1c-1.4-1.5-3.6-1.5-5 0-1.9 1.9-1.9 5.1 0 7l4.9 5.1a2 2 0 0 0 3.3 0C17.7 13.9 17.7 7.7 16.1 6.1L14 4.1Z" />
+                            <path d="m14 4.1-1.89 1.9" />
+                            <path d="M16.1 6.1 18 4.2" />
+                            <path d="M20 9a2.4 2.4 0 0 0-1.7-2.3" />
+                            <path d="M16 17a2 2 0 1 0 0 4h1a2 2 0 1 0 0-4h-1Z" />
+                        </svg>
+                    </div>
                     <h3 class="text-xl">Manejo del Estrés</h3>
                     <p class="text-gray-600 mt-2">Disminuye el estrés calórico, siendo ideal para sistemas de pastoreo en climas tropicales.</p>
                 </div>
             </div>
         </section>
-        
+
+        <!-- Sección 4: Comparación Técnica de Fuentes Energéticas con fondo azul-gris -->
+        <section id="technical-comparison" class="mb-16">
+            <div class="text-center max-w-4xl mx-auto mb-12">
+                <h2 class="text-3xl lg:text-4xl font-black text-premex-blue mb-4">Comparación Técnica de Fuentes Energéticas</h2>
+                <p class="text-lg text-gray-600">Una visión detallada para la correcta toma de decisiones en la formulación de dietas.</p>
+            </div>
+            <div class="bg-gray-100 p-8 rounded-xl shadow-md overflow-x-auto">
+                <table class="technical-table w-full text-left border-collapse rounded-lg">
+                    <thead>
+                        <tr class="bg-premex-blue text-white">
+                            <th class="rounded-tl-lg">Parámetro</th>
+                            <th>Pasagrass®</th>
+                            <th>Almidón</th>
+                            <th class="rounded-tr-lg">Grasa sin Protección</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Absorción</td>
+                            <td>Intestino delgado (By-pass)</td>
+                            <td>Rumen</td>
+                            <td>Parcial, con interferencia ruminal</td>
+                        </tr>
+                        <tr>
+                            <td>Impacto en fermentación ruminal</td>
+                            <td>Nulo</td>
+                            <td>Positivo/neutral</td>
+                            <td>Negativo</td>
+                        </tr>
+                        <tr>
+                            <td>Digestibilidad de fibra (FDN)</td>
+                            <td>Conservada</td>
+                            <td>Puede reducirse</td>
+                            <td>Disminuye</td>
+                        </tr>
+                        <tr>
+                            <td>Energía neta lactancia (ENL)</td>
+                            <td>2.2-2.5x > que almidón</td>
+                            <td>Media</td>
+                            <td>Alta, pero mal aprovechada</td>
+                        </tr>
+                        <tr>
+                            <td>Riesgo de cetosis/acidosis</td>
+                            <td>Reduce</td>
+                            <td>Puede causar</td>
+                            <td>Aumenta</td>
+                        </tr>
+                        <tr>
+                            <td>Aplicación en climas cálidos</td>
+                            <td>Ideal</td>
+                            <td>Alto calor metabólico</td>
+                            <td>Alto</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </section>
+
         <!-- Sección 5: Perfil Técnico y Composición -->
         <section id="technical-profile" class="mb-16">
             <div class="grid grid-cols-1 md:grid-cols-2 gap-12 items-center bg-white p-8 md:p-12 rounded-xl shadow-md">
@@ -166,26 +283,26 @@
                     <ul class="space-y-4 text-lg">
                         <li class="flex justify-between items-center border-b pb-2">
                             <span class="font-semibold">Grasa Total (MS)</span>
-                            <span class="font-bold text-premex-blue bg-blue-100 px-3 py-1 rounded-full">84.9%</span>
+                            <span class="font-bold text-premex-blue bg-gray-100 px-3 py-1 rounded-full">84.9%</span>
                         </li>
                         <li class="flex justify-between items-center border-b pb-2">
                             <span class="font-semibold">Calcio</span>
-                            <span class="font-bold text-premex-blue bg-blue-100 px-3 py-1 rounded-full">9.91%</span>
+                            <span class="font-bold text-premex-blue bg-gray-100 px-3 py-1 rounded-full">9.91%</span>
                         </li>
                          <li class="flex justify-between items-center border-b pb-2">
                             <span class="font-semibold">Humedad</span>
-                            <span class="font-bold text-premex-blue bg-blue-100 px-3 py-1 rounded-full">&lt; 2%</span>
+                            <span class="font-bold text-premex-blue bg-gray-100 px-3 py-1 rounded-full">&lt; 2%</span>
                         </li>
                         <li class="flex justify-between items-center border-b pb-2">
                             <span class="font-semibold">Origen</span>
-                            <span class="font-bold text-premex-blue bg-blue-100 px-3 py-1 rounded-full">100% Vegetal</span>
+                            <span class="font-bold text-premex-blue bg-gray-100 px-3 py-1 rounded-full">100% Vegetal</span>
                         </li>
                         <li class="flex justify-between items-center">
                             <span class="font-semibold">Granulometría</span>
-                            <span class="font-bold text-premex-blue bg-blue-100 px-3 py-1 rounded-full">1632 μm</span>
+                            <span class="font-bold text-premex-blue bg-gray-100 px-3 py-1 rounded-full">&lt; 3 mm</span>
                         </li>
                     </ul>
-                    <p class="mt-6 text-gray-600">Con un perfil lipídico dominante en Ácido Palmítico (C16:0) y Oleico (C18:1), Pasagrass® está optimizado para maximizar la producción de leche y mejorar la condición corporal.</p>
+                    <p class="mt-6 text-gray-600">El perfil lipídico de Pasagrass® es dominante en Ácido Palmítico (C16:0) y Ácido Oleico (C18:1). El Ácido Palmítico ayuda a maximizar la producción de grasa en la leche, mientras que el Ácido Oleico mejora la condición corporal y el balance energético, crucial para la fertilidad.</p>
                 </div>
             </div>
         </section>
@@ -199,7 +316,7 @@
             <div class="overflow-x-auto bg-white p-6 rounded-xl shadow-md">
                 <table class="w-full text-left border-collapse">
                     <thead>
-                        <tr class="bg-blue-50 text-premex-blue">
+                        <tr class="bg-gray-200 text-premex-blue">
                             <th class="p-4 rounded-tl-lg">Tipo de Animal</th>
                             <th class="p-4">Etapa Productiva</th>
                             <th class="p-4 rounded-tr-lg">Ración Diaria Sugerida</th>
@@ -212,8 +329,8 @@
                             <td class="p-4 font-mono">250 - 600 g/vaca/día</td>
                         </tr>
                         <tr class="border-b border-gray-200">
-                            <td class="p-4 font-semibold">Vacas en producción</td>
-                            <td class="p-4">Lactancia</td>
+                            <td class="p-4 font-semibold">Vacas lecheras</td>
+                            <td class="p-4">Trópico Bajo</td>
                             <td class="p-4 font-mono">10 g por cada litro de leche producida (100 - 300 g/día)</td>
                         </tr>
                         <tr class="border-b border-gray-200">
@@ -251,32 +368,17 @@
             </div>
         </section>
 
-        <!-- Sección 7: Hoja de Seguridad y Propiedades -->
-        <section id="safety" class="mb-16">
-            <div class="text-center max-w-4xl mx-auto mb-12">
-                <h2 class="text-3xl lg:text-4xl font-black text-premex-blue mb-4">Propiedades Físicas y Seguridad</h2>
-                <p class="text-lg text-gray-600">Pasagrass® es un producto seguro, estable y de alta calidad, clasificado como no peligroso para su transporte y manejo.</p>
-            </div>
-            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-                <div class="icon-card">
-                    <div class="icon">📦</div>
-                    <h3 class="text-xl">Forma Física</h3>
-                    <p class="text-gray-600 mt-2">Polvo impalpable sólido de color crema, fácil de manejar y mezclar.</p>
-                </div>
-                <div class="icon-card">
-                    <div class="icon">👃</div>
-                    <h3 class="text-xl">Olor</h3>
-                    <p class="text-gray-600 mt-2">Olor leve y característico a palma.</p>
-                </div>
-                <div class="icon-card">
-                    <div class="icon">⏳</div>
-                    <h3 class="text-xl">Estabilidad</h3>
-                    <p class="text-gray-600 mt-2">Estable bajo condiciones adecuadas de almacenamiento y manejo.</p>
-                </div>
-                <div class="icon-card">
-                    <div class="icon">🚫</div>
-                    <h3 class="text-xl">No Peligroso</h3>
-                    <p class="text-gray-600 mt-2">No se considera tóxico ni peligroso, y no requiere manejo especial.</p>
+        <!-- Sección de Cierre Estratégico con fondo gris azulado -->
+        <section id="strategic-closing" class="mb-16">
+            <div class="bg-gray-100 p-8 md:p-12 rounded-xl shadow-inner text-center">
+                <h2 class="text-3xl lg:text-4xl font-black text-premex-blue mb-4">Transforme Nutrición en Rentabilidad</h2>
+                <p class="text-lg text-gray-600 max-w-3xl mx-auto leading-relaxed">
+                    Pasagrass® es más que un suplemento energético; es una inversión estratégica para su hato. En ganadería de leche, carne y cría, optimiza el balance energético para mejorar la condición corporal, la producción y el desempeño reproductivo. Es la solución nutricional que optimiza el potencial de sus animales de alto valor genético.
+                </p>
+                <div class="mt-8">
+                    <a href="tel:+573218024456" class="inline-block bg-premex-blue text-white font-bold text-lg px-8 py-4 rounded-full shadow-lg hover:bg-blue-800 transition-colors duration-300 transform hover:scale-105">
+                        Conecte con un Consultor
+                    </a>
                 </div>
             </div>
         </section>
@@ -284,8 +386,8 @@
     </main>
 
     <footer class="bg-gray-800 text-white p-8 md:p-12 mt-12 text-center">
-        <p class="font-bold text-3xl text-premex-yellow">Pasagrass®</p>
-        <p class="mt-2 text-xl">Potenciando la ganadería con energía inteligente.</p>
+        <p class="font-bold text-3xl text-white">Pasagrass®</p>
+        <p class="mt-2 text-xl text-gray-300">Potenciando la ganadería con energía inteligente.</p>
         <p class="text-sm text-gray-400 mt-4">Toda la información presentada se basa en la documentación técnica del producto y estudios científicos de referencia.</p>
     </footer>
 
@@ -337,7 +439,7 @@
                     callbacks: {
                         title: tooltipTitleCallback
                     },
-                    backgroundColor: '#003f5c',
+                    backgroundColor: '#203A59', /* Nuevo color azul */
                     titleFont: { size: 16, weight: 'bold' },
                     bodyFont: { size: 14 },
                     padding: 12,
@@ -366,11 +468,9 @@
         };
 
         const colors = {
-            premexBlue: '#003f5c',
-            premexYellow: '#ffa600',
-            accent1: '#58508d',
-            accent2: '#ff6361',
-            accent3: '#bc5090'
+            premexBlue: '#203A59',
+            premexAccent: '#754133',
+            premexLightGray: '#EEEEEE',
         };
 
         document.addEventListener('DOMContentLoaded', () => {
@@ -384,9 +484,9 @@
                         data: [40.13, 40.16, 10.89, 8.82], // 100 - 40.13 - 40.16 - 10.89 = 8.82
                         backgroundColor: [
                             colors.premexBlue,
-                            colors.premexYellow,
-                            colors.accent1,
-                            colors.accent2
+                            colors.premexAccent,
+                            '#bc5090',
+                            '#ff6361'
                         ],
                         hoverOffset: 4
                     }]
